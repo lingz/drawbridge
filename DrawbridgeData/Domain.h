@@ -25,5 +25,6 @@
 - (void)removeAccounts:(NSSet *)values;
 
 - (NSDictionary *) toDict;
++ (Domain *) fromDict: (NSDictionary *)domainDict;
 
 @end

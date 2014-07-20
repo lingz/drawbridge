@@ -26,4 +26,14 @@
             };
 }
 
++ (Account *) fromDict: (NSDictionary *) accountDict
+{
+    Account *theNewAccount = [Account MR_createEntity];
+    theNewAccount.hashedPassword = [accountDict valueForKeyPath:@"hashedPassword"];
+    theNewAccount.encryptedPassword = [accountDict valueForKeyPath:@"encryptedPassword"];
+    theNewAccount.username = [accountDict valueForKeyPath:@"username"];
+
+    return theNewAccount;
+}
+
 @end

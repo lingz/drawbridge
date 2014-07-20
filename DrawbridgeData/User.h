@@ -26,5 +26,6 @@
 - (void)removeDomains:(NSSet *)values;
 
 - (NSDictionary *) toDict;
++ (User *) fromDict: (NSDictionary *) dict;
 
 @end

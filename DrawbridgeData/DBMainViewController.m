@@ -45,7 +45,7 @@
 
 }
 - (IBAction)saveToFirebase:(id)sender {
-    [self.store syncUserToFirebase];
+    [self.store saveUserToFirebase];
 }
 
 - (void)refreshStoreData

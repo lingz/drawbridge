@@ -7,20 +7,34 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DBFirebase.h"
+
 @class User;
 @class Domain;
 @class Account;
 
-@interface DBStore : NSObject
+@protocol DBStoreUserDelegate <NSObject>
+
+- (void) handleUserUpdate;
+
+@end
+
+@protocol DBStoreMessageDelegate <NSObject>
+
+- (void) handleMessageUpdate;
+
+@end
+
+@interface DBStore : NSObject<DBFirebaseDelegate>
 @property User *activeUser;
 @property NSString *userPhoneNumber;
-
 
 + (DBStore *) getStore;
 - (void)saveContext;
 - (User *) newUser;
 - (void)saveNewPhoneNumber:(NSString *) theNewPhoneNumber;
-- (void)syncUserToFirebase;
+- (void)saveUserToFirebase;
+- (void)handleFBLoadUser:(User *)theNewUser;
 
 
 @end

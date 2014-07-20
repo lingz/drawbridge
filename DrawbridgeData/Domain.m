@@ -30,4 +30,22 @@
             };
 }
 
++ (Domain *) fromDict: (NSDictionary *) domainDict
+{
+    Domain *theNewDomain = [Domain MR_createEntity];
+    theNewDomain.host = [domainDict valueForKeyPath:@"host"];
+    
+    NSDictionary *accounts = [domainDict valueForKeyPath:@"accounts"];
+    
+    if (accounts) {
+        NSArray *allKeys = [accounts allKeys];
+        for (NSString *key in allKeys) {
+            NSDictionary *accountDict = [accounts valueForKeyPath:key];
+            Account *accountObject = [Account fromDict:accountDict];
+            [theNewDomain addAccountsObject:accountObject];
+        }
+    }
+    return theNewDomain;
+}
+
 @end

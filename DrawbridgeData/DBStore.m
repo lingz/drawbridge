@@ -17,6 +17,8 @@
 
 @property NSUserDefaults *defaults;
 @property DBFirebase *fbInterface;
+@property id<DBStoreUserDelegate> userChangeDelegate;
+@property id<DBStoreMessageDelegate> messageChangeDelegate;
 
 @end
 
@@ -50,7 +52,6 @@
         return self.activeUser;
     }
     return nil;
-    
 }
 
 - (void)saveNewPhoneNumber:(NSString *) theNewPhoneNumber {
@@ -60,7 +61,10 @@
     User *theNewUser = [self phoneNumberToUser:theNewPhoneNumber];
     
     self.userPhoneNumber = theNewPhoneNumber;
-    self.activeUser = theNewUser;
+    if (theNewUser)
+    {
+        [self changeActiveUser:theNewUser];
+    }
 }
 
 - (User *) phoneNumberToUser: (NSString *) phoneNumber {
@@ -79,6 +83,7 @@
         if (self.userPhoneNumber) {
             self.activeUser = [self phoneNumberToUser: self.userPhoneNumber];
         }
+        [self syncFirebase];
     }
     return self;
 }
@@ -87,7 +92,7 @@
     self.userPhoneNumber = [self.defaults stringForKey:@"phoneNumber"];
 }
 
-- (void) syncUserToFirebase {
+- (void) saveUserToFirebase {
     if (self.activeUser) {
         [self.fbInterface saveUser:self.activeUser];
     }
@@ -101,5 +106,30 @@
             NSLog(@"Error saving context: %@", error.description);
         }
     }];
+}
+
+- (void)syncFirebase {
+    [self.fbInterface loadUser:self.activeUser.phoneNumber];
+}
+
+- (void)handleFBLoadUser:(User *)theNewUser
+{
+    if (self.activeUser) {
+        [self.activeUser MR_deleteEntity];
+    }
+    [self saveNewPhoneNumber: self.activeUser.phoneNumber];
+    
+    if (theNewUser)
+    {
+        [self saveContext];
+        [self changeActiveUser:theNewUser];
+    }
+}
+
+- (void)changeActiveUser:(User *)theNewUser
+{
+    self.activeUser = theNewUser;
+    // call the delegate
+    [self.userChangeDelegate handleUserUpdate];
 }
 @end

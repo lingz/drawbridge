@@ -32,5 +32,24 @@
             };
 }
 
++ (User *) fromDict: (NSDictionary *)dict
+{
+    User *theNewUser = [User MR_createEntity];
+    theNewUser.phoneNumber = [dict valueForKeyPath:@"phoneNumber"];
+    theNewUser.secret = [dict valueForKeyPath:@"secret"];
+    
+    NSDictionary *domains = [dict valueForKeyPath:@"domains"];
+    
+    if (domains) {
+        NSArray *allKeys = [domains allKeys];
+        for (NSString *key in allKeys) {
+            NSDictionary *domainDict = [domains valueForKeyPath:key];
+            Domain *domainObject = [Domain fromDict:domainDict];
+            [theNewUser addDomainsObject:domainObject];
+        }
+    }
+    return theNewUser;
+}
+
 
 @end

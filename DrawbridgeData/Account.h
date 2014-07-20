@@ -19,5 +19,6 @@
 @property (nonatomic, retain) Domain *domain;
 
 - (NSDictionary *) toDict;
++ (Account *) fromDict: (NSDictionary *)accountDict;
 
 @end

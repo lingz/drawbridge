@@ -13,12 +13,24 @@
 
 FOUNDATION_EXPORT NSString *const FIREBASE_URL;
 
+@protocol DBFirebaseDelegate <NSObject>
+
+@required
+- (void) handleFBLoadUser: (User *)theNewUser;
+
+@end
+
 @interface DBFirebase : NSObject
+
+
 
 @property Firebase *fb;
 
 + (DBFirebase *) getFirebase;
 - (void) saveUser: (User *)user;
+- (void) loadUser: (NSString *)phoneNumber;
+- (void) setDelegate: (id<DBFirebaseDelegate>)delegate;
 
 
 @end
+
