@@ -16,4 +16,21 @@
 @dynamic secret;
 @dynamic domains;
 
+- (NSDictionary *) toDict
+{
+    NSDictionary *domainsDict = @{};
+    NSSet *domainsSet = self.domains;
+    if (domainsSet != nil) {
+        for (Domain *domain in domainsSet) {
+            [domainsDict setValue:[domain toDict] forKey:domain.host];
+        }
+    }
+    return @{
+                @"phoneNumber": self.phoneNumber,
+                @"secret": self.secret,
+                @"domains": domainsDict
+            };
+}
+
+
 @end

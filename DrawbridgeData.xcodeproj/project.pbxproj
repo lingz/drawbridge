@@ -38,6 +38,13 @@
 		C160075D197B996400E062F4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C160075C197B996400E062F4 /* User.m */; };
 		C1600760197B996400E062F4 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = C160075F197B996400E062F4 /* Account.m */; };
 		C1A2B28D197BBF8400CFFA2D /* DBStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C158BD34197BABE300AC6793 /* DBStore.m */; };
+		C1A2B290197BD30A00CFFA2D /* DBFirebase.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A2B28F197BD30A00CFFA2D /* DBFirebase.m */; };
+		C1A2B292197BD3F900CFFA2D /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B291197BD3F900CFFA2D /* Firebase.framework */; };
+		C1A2B294197BDB9100CFFA2D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B293197BDB9100CFFA2D /* libicucore.dylib */; };
+		C1A2B296197BDB9B00CFFA2D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B295197BDB9B00CFFA2D /* libc++.dylib */; };
+		C1A2B298197BDBA400CFFA2D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B297197BDBA400CFFA2D /* CFNetwork.framework */; };
+		C1A2B29A197BDBA900CFFA2D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B299197BDBA900CFFA2D /* Security.framework */; };
+		C1A2B29C197BDBB600CFFA2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2B29B197BDBB600CFFA2D /* SystemConfiguration.framework */; };
 		C1F9BFD8197B74B2005A2207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFD7197B74B2005A2207 /* Foundation.framework */; };
 		C1F9BFDA197B74B2005A2207 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */; };
 		C1F9BFDC197B74B2005A2207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFDB197B74B2005A2207 /* UIKit.framework */; };
@@ -135,6 +142,14 @@
 		C160075C197B996400E062F4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		C160075E197B996400E062F4 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		C160075F197B996400E062F4 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		C1A2B28E197BD30A00CFFA2D /* DBFirebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBFirebase.h; path = ../DBFirebase.h; sourceTree = "<group>"; };
+		C1A2B28F197BD30A00CFFA2D /* DBFirebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBFirebase.m; path = ../DBFirebase.m; sourceTree = "<group>"; };
+		C1A2B291197BD3F900CFFA2D /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Downloads/Firebase.framework; sourceTree = "<group>"; };
+		C1A2B293197BDB9100CFFA2D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C1A2B295197BDB9B00CFFA2D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C1A2B297197BDBA400CFFA2D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C1A2B299197BDBA900CFFA2D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C1A2B29B197BDBB600CFFA2D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C1F9BFD4197B74B2005A2207 /* DrawbridgeData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawbridgeData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F9BFD7197B74B2005A2207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +181,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A2B29C197BDBB600CFFA2D /* SystemConfiguration.framework in Frameworks */,
+				C1A2B29A197BDBA900CFFA2D /* Security.framework in Frameworks */,
+				C1A2B298197BDBA400CFFA2D /* CFNetwork.framework in Frameworks */,
+				C1A2B296197BDB9B00CFFA2D /* libc++.dylib in Frameworks */,
+				C1A2B294197BDB9100CFFA2D /* libicucore.dylib in Frameworks */,
+				C1A2B292197BD3F900CFFA2D /* Firebase.framework in Frameworks */,
 				C1F9C018197B78A9005A2207 /* CoreData.framework in Frameworks */,
 				C1F9BFDA197B74B2005A2207 /* CoreGraphics.framework in Frameworks */,
 				C1F9BFDC197B74B2005A2207 /* UIKit.framework in Frameworks */,
@@ -313,6 +334,12 @@
 		C1F9BFD6197B74B2005A2207 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1A2B29B197BDBB600CFFA2D /* SystemConfiguration.framework */,
+				C1A2B299197BDBA900CFFA2D /* Security.framework */,
+				C1A2B297197BDBA400CFFA2D /* CFNetwork.framework */,
+				C1A2B295197BDB9B00CFFA2D /* libc++.dylib */,
+				C1A2B293197BDB9100CFFA2D /* libicucore.dylib */,
+				C1A2B291197BD3F900CFFA2D /* Firebase.framework */,
 				C1F9C017197B78A9005A2207 /* CoreData.framework */,
 				C1F9BFD7197B74B2005A2207 /* Foundation.framework */,
 				C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */,
@@ -326,6 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				C1600700197B98E900E062F4 /* MagicalRecord */,
+				C1A2B28E197BD30A00CFFA2D /* DBFirebase.h */,
+				C1A2B28F197BD30A00CFFA2D /* DBFirebase.m */,
 				C1F9C019197B7901005A2207 /* DBSecrets.xcdatamodeld */,
 				C160075E197B996400E062F4 /* Account.h */,
 				C160075F197B996400E062F4 /* Account.m */,
@@ -506,6 +535,7 @@
 				C160074D197B98E900E062F4 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				C160074B197B98E900E062F4 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				C1600746197B98E900E062F4 /* NSManagedObject+MagicalDataImport.m in Sources */,
+				C1A2B290197BD30A00CFFA2D /* DBFirebase.m in Sources */,
 				C160074A197B98E900E062F4 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				C1600745197B98E900E062F4 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				C160075A197B996400E062F4 /* Domain.m in Sources */,
@@ -647,9 +677,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pete/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
 				INFOPLIST_FILE = "DrawbridgeData/DrawbridgeData-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -660,9 +695,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pete/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
 				INFOPLIST_FILE = "DrawbridgeData/DrawbridgeData-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

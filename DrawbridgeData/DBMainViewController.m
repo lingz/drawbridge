@@ -15,8 +15,14 @@
 
 @interface DBMainViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *currentPhoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField *currentPhoneNumber;
+
 @property (weak, nonatomic) IBOutlet UITextField *theNewPhoneNumberField;
+@property (weak, nonatomic) IBOutlet UITextField *activeUserPhone;
+@property (weak, nonatomic) IBOutlet UITextField *activeUserSecret;
+@property (weak, nonatomic) IBOutlet UITextField *hasActiveUser;
+
+
 @property NSString *phoneNumber;
 @property DBStore *store;
 
@@ -25,8 +31,9 @@
 
 @implementation DBMainViewController
 
-- (IBAction)newUser:(id)sender {
+- (IBAction)newUser:(UIButton *)sender {
     [self.store newUser];
+    [self refreshStoreData];
 }
 
 - (void)viewDidLoad
@@ -34,19 +41,30 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.store = [DBStore getStore];
-    [self refreshCurrentPhoneField];
+    [self refreshStoreData];
 
 }
+- (IBAction)saveToFirebase:(id)sender {
+    [self.store syncUserToFirebase];
+}
 
-- (void)refreshCurrentPhoneField
+- (void)refreshStoreData
 {
+    User *activeUser = self.store.activeUser;
+    
     self.currentPhoneNumber.text = self.store.userPhoneNumber;
+    
+    self.activeUserPhone.text = activeUser.phoneNumber;
+    self.activeUserSecret.text = activeUser.secret;
+    
+    self.hasActiveUser.text = (activeUser == nil) ? @"NO" : @"YES";
+    
 }
 - (IBAction)saveNewPhoneNumber:(id)sender {
     NSString *theNewPhoneNumber = self.theNewPhoneNumberField.text;
     
     [self.store saveNewPhoneNumber: theNewPhoneNumber];
-    [self refreshCurrentPhoneField];
+    [self refreshStoreData];
     
 }
 

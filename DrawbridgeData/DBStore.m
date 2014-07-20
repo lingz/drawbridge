@@ -11,16 +11,16 @@
 #import "Domain.h"
 #import "User.h"
 #import "DBCrypto.h"
+#import "DBFirebase.h"
 
 @interface DBStore()
 
 @property NSUserDefaults *defaults;
-@property NSString *currentPhoneNumber;
+@property DBFirebase *fbInterface;
 
 @end
 
 @implementation DBStore
-
 
 
 + (DBStore *) getStore {
@@ -35,13 +35,16 @@
 
 - (User *)newUser
 {
-    if (self.currentPhoneNumber) {
+    if (self.userPhoneNumber != nil) {
+
         
         self.activeUser = [User MR_createEntity];
+
         
         self.activeUser.secret = [DBCrypto randomSecret:30];
+
         self.activeUser.phoneNumber = self.userPhoneNumber;
-        
+
         [self saveContext];
         
         return self.activeUser;
@@ -68,14 +71,26 @@
 
 - (id) init {
     if (self = [super init]) {
+        // Firebase init
+        self.fbInterface = [DBFirebase getFirebase];
+        
         self.defaults = [NSUserDefaults standardUserDefaults];
         [self extractOptions];
+        if (self.userPhoneNumber) {
+            self.activeUser = [self phoneNumberToUser: self.userPhoneNumber];
+        }
     }
     return self;
 }
 
 - (void) extractOptions {
     self.userPhoneNumber = [self.defaults stringForKey:@"phoneNumber"];
+}
+
+- (void) syncUserToFirebase {
+    if (self.activeUser) {
+        [self.fbInterface saveUser:self.activeUser];
+    }
 }
 
 - (void)saveContext {

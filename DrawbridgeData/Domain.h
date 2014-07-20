@@ -24,4 +24,6 @@
 - (void)addAccounts:(NSSet *)values;
 - (void)removeAccounts:(NSSet *)values;
 
+- (NSDictionary *) toDict;
+
 @end

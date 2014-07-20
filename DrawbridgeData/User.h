@@ -25,4 +25,6 @@
 - (void)addDomains:(NSSet *)values;
 - (void)removeDomains:(NSSet *)values;
 
+- (NSDictionary *) toDict;
+
 @end

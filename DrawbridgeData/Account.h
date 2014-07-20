@@ -14,7 +14,10 @@
 @interface Account : NSManagedObject
 
 @property (nonatomic, retain) NSString * hashedPassword;
+@property (nonatomic, retain) NSString * encryptedPassword;
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) Domain *domain;
+
+- (NSDictionary *) toDict;
 
 @end

@@ -18,6 +18,4 @@
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
-+ (User *) newUser;
-
 @end

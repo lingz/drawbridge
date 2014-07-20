@@ -13,7 +13,17 @@
 @implementation Account
 
 @dynamic hashedPassword;
+@dynamic encryptedPassword;
 @dynamic username;
 @dynamic domain;
+
+- (NSDictionary *) toDict
+{
+    return @{
+                @"hashedPassword": self.hashedPassword,
+                @"encryptedPassword": self.encryptedPassword,
+                @"username": self.username
+            };
+}
 
 @end

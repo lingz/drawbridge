@@ -15,9 +15,12 @@
 @property User *activeUser;
 @property NSString *userPhoneNumber;
 
+
 + (DBStore *) getStore;
 - (void)saveContext;
 - (User *) newUser;
 - (void)saveNewPhoneNumber:(NSString *) theNewPhoneNumber;
+- (void)syncUserToFirebase;
+
 
 @end
