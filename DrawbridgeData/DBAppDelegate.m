@@ -6,12 +6,15 @@
 //  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
 //
 
+#import "CoreData+MagicalRecord.h"
 #import "DBAppDelegate.h"
+
 
 @implementation DBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MagicalRecord setupCoreDataStackWithStoreNamed: @"DBSecrets"];
     // Override point for customization after application launch.
     return YES;
 }
@@ -42,5 +45,8 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+// Core Data
+
 
 @end

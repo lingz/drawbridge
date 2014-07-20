@@ -7,17 +7,47 @@
 //
 
 #import "DBMainViewController.h"
+#import "Account.h"
+#import "Domain.h"
+#import "User.h"
+#import "DBAppDelegate.h"
+#import "DBStore.h"
 
 @interface DBMainViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *currentPhoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField *theNewPhoneNumberField;
+@property NSString *phoneNumber;
+@property DBStore *store;
+
 
 @end
 
 @implementation DBMainViewController
 
+- (IBAction)newUser:(id)sender {
+    [self.store newUser];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.store = [DBStore getStore];
+    [self refreshCurrentPhoneField];
+
+}
+
+- (void)refreshCurrentPhoneField
+{
+    self.currentPhoneNumber.text = self.store.userPhoneNumber;
+}
+- (IBAction)saveNewPhoneNumber:(id)sender {
+    NSString *theNewPhoneNumber = self.theNewPhoneNumberField.text;
+    
+    [self.store saveNewPhoneNumber: theNewPhoneNumber];
+    [self refreshCurrentPhoneField];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,4 +95,6 @@
     }
 }
 
+- (IBAction)touchEvent:(id)sender {
+}
 @end

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="hashedPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="domain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Domain" inverseName="accounts" inverseEntity="Domain" syncable="YES"/>
+    </entity>
+    <entity name="Domain" representedClassName="Domain" syncable="YES">
+        <attribute name="host" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="domain" inverseEntity="Account" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="domains" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="phoneNumber" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="secret" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="domains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Domain" inverseName="user" inverseEntity="Domain" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-306" positionY="27" width="128" height="88"/>
+        <element name="Domain" positionX="-36" positionY="27" width="128" height="88"/>
+        <element name="User" positionX="-234" positionY="243" width="128" height="88"/>
+    </elements>
+</model>

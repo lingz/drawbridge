@@ -8,8 +8,16 @@
 
 #import "DBFlipsideViewController.h"
 
+@class User;
+@class Domain;
+@class Account;
+
 @interface DBMainViewController : UIViewController <DBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
+@property (strong, nonatomic) User *activeUser;
+
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+
++ (User *) newUser;
 
 @end
