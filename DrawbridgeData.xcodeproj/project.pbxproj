@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1F9BFD8197B74B2005A2207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFD7197B74B2005A2207 /* Foundation.framework */; };
+		C1F9BFDA197B74B2005A2207 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */; };
+		C1F9BFDC197B74B2005A2207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFDB197B74B2005A2207 /* UIKit.framework */; };
+		C1F9BFE2197B74B2005A2207 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1F9BFE0197B74B2005A2207 /* InfoPlist.strings */; };
+		C1F9BFE4197B74B2005A2207 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9BFE3197B74B2005A2207 /* main.m */; };
+		C1F9BFE8197B74B2005A2207 /* DBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9BFE7197B74B2005A2207 /* DBAppDelegate.m */; };
+		C1F9BFEB197B74B2005A2207 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F9BFE9197B74B2005A2207 /* Main_iPhone.storyboard */; };
+		C1F9BFEE197B74B2005A2207 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F9BFEC197B74B2005A2207 /* Main_iPad.storyboard */; };
+		C1F9BFF1197B74B2005A2207 /* DBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9BFF0197B74B2005A2207 /* DBMainViewController.m */; };
+		C1F9BFF4197B74B2005A2207 /* DBFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9BFF3197B74B2005A2207 /* DBFlipsideViewController.m */; };
+		C1F9BFF6197B74B2005A2207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F9BFF5197B74B2005A2207 /* Images.xcassets */; };
+		C1F9BFFD197B74B2005A2207 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFFC197B74B2005A2207 /* XCTest.framework */; };
+		C1F9BFFE197B74B2005A2207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFD7197B74B2005A2207 /* Foundation.framework */; };
+		C1F9BFFF197B74B2005A2207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F9BFDB197B74B2005A2207 /* UIKit.framework */; };
+		C1F9C007197B74B2005A2207 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1F9C005197B74B2005A2207 /* InfoPlist.strings */; };
+		C1F9C009197B74B2005A2207 /* DrawbridgeDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9C008197B74B2005A2207 /* DrawbridgeDataTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1F9C000197B74B2005A2207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1F9BFCC197B74B2005A2207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F9BFD3197B74B2005A2207;
+			remoteInfo = DrawbridgeData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1F9BFD4197B74B2005A2207 /* DrawbridgeData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawbridgeData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F9BFD7197B74B2005A2207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C1F9BFDB197B74B2005A2207 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1F9BFDF197B74B2005A2207 /* DrawbridgeData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawbridgeData-Info.plist"; sourceTree = "<group>"; };
+		C1F9BFE1197B74B2005A2207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1F9BFE3197B74B2005A2207 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1F9BFE5197B74B2005A2207 /* DrawbridgeData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawbridgeData-Prefix.pch"; sourceTree = "<group>"; };
+		C1F9BFE6197B74B2005A2207 /* DBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBAppDelegate.h; sourceTree = "<group>"; };
+		C1F9BFE7197B74B2005A2207 /* DBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBAppDelegate.m; sourceTree = "<group>"; };
+		C1F9BFEA197B74B2005A2207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C1F9BFED197B74B2005A2207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C1F9BFEF197B74B2005A2207 /* DBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBMainViewController.h; sourceTree = "<group>"; };
+		C1F9BFF0197B74B2005A2207 /* DBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBMainViewController.m; sourceTree = "<group>"; };
+		C1F9BFF2197B74B2005A2207 /* DBFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBFlipsideViewController.h; sourceTree = "<group>"; };
+		C1F9BFF3197B74B2005A2207 /* DBFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBFlipsideViewController.m; sourceTree = "<group>"; };
+		C1F9BFF5197B74B2005A2207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C1F9BFFB197B74B2005A2207 /* DrawbridgeDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawbridgeDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F9BFFC197B74B2005A2207 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C1F9C004197B74B2005A2207 /* DrawbridgeDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawbridgeDataTests-Info.plist"; sourceTree = "<group>"; };
+		C1F9C006197B74B2005A2207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1F9C008197B74B2005A2207 /* DrawbridgeDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawbridgeDataTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1F9BFD1197B74B2005A2207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9BFDA197B74B2005A2207 /* CoreGraphics.framework in Frameworks */,
+				C1F9BFDC197B74B2005A2207 /* UIKit.framework in Frameworks */,
+				C1F9BFD8197B74B2005A2207 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F9BFF8197B74B2005A2207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9BFFD197B74B2005A2207 /* XCTest.framework in Frameworks */,
+				C1F9BFFF197B74B2005A2207 /* UIKit.framework in Frameworks */,
+				C1F9BFFE197B74B2005A2207 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1F9BFCB197B74B2005A2207 = {
+			isa = PBXGroup;
+			children = (
+				C1F9BFDD197B74B2005A2207 /* DrawbridgeData */,
+				C1F9C002197B74B2005A2207 /* DrawbridgeDataTests */,
+				C1F9BFD6197B74B2005A2207 /* Frameworks */,
+				C1F9BFD5197B74B2005A2207 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1F9BFD5197B74B2005A2207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9BFD4197B74B2005A2207 /* DrawbridgeData.app */,
+				C1F9BFFB197B74B2005A2207 /* DrawbridgeDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1F9BFD6197B74B2005A2207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9BFD7197B74B2005A2207 /* Foundation.framework */,
+				C1F9BFD9197B74B2005A2207 /* CoreGraphics.framework */,
+				C1F9BFDB197B74B2005A2207 /* UIKit.framework */,
+				C1F9BFFC197B74B2005A2207 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1F9BFDD197B74B2005A2207 /* DrawbridgeData */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9BFE6197B74B2005A2207 /* DBAppDelegate.h */,
+				C1F9BFE7197B74B2005A2207 /* DBAppDelegate.m */,
+				C1F9BFE9197B74B2005A2207 /* Main_iPhone.storyboard */,
+				C1F9BFEC197B74B2005A2207 /* Main_iPad.storyboard */,
+				C1F9BFEF197B74B2005A2207 /* DBMainViewController.h */,
+				C1F9BFF0197B74B2005A2207 /* DBMainViewController.m */,
+				C1F9BFF2197B74B2005A2207 /* DBFlipsideViewController.h */,
+				C1F9BFF3197B74B2005A2207 /* DBFlipsideViewController.m */,
+				C1F9BFF5197B74B2005A2207 /* Images.xcassets */,
+				C1F9BFDE197B74B2005A2207 /* Supporting Files */,
+			);
+			path = DrawbridgeData;
+			sourceTree = "<group>";
+		};
+		C1F9BFDE197B74B2005A2207 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9BFDF197B74B2005A2207 /* DrawbridgeData-Info.plist */,
+				C1F9BFE0197B74B2005A2207 /* InfoPlist.strings */,
+				C1F9BFE3197B74B2005A2207 /* main.m */,
+				C1F9BFE5197B74B2005A2207 /* DrawbridgeData-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1F9C002197B74B2005A2207 /* DrawbridgeDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9C008197B74B2005A2207 /* DrawbridgeDataTests.m */,
+				C1F9C003197B74B2005A2207 /* Supporting Files */,
+			);
+			path = DrawbridgeDataTests;
+			sourceTree = "<group>";
+		};
+		C1F9C003197B74B2005A2207 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9C004197B74B2005A2207 /* DrawbridgeDataTests-Info.plist */,
+				C1F9C005197B74B2005A2207 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1F9BFD3197B74B2005A2207 /* DrawbridgeData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F9C00C197B74B2005A2207 /* Build configuration list for PBXNativeTarget "DrawbridgeData" */;
+			buildPhases = (
+				C1F9BFD0197B74B2005A2207 /* Sources */,
+				C1F9BFD1197B74B2005A2207 /* Frameworks */,
+				C1F9BFD2197B74B2005A2207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawbridgeData;
+			productName = DrawbridgeData;
+			productReference = C1F9BFD4197B74B2005A2207 /* DrawbridgeData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1F9BFFA197B74B2005A2207 /* DrawbridgeDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F9C00F197B74B2005A2207 /* Build configuration list for PBXNativeTarget "DrawbridgeDataTests" */;
+			buildPhases = (
+				C1F9BFF7197B74B2005A2207 /* Sources */,
+				C1F9BFF8197B74B2005A2207 /* Frameworks */,
+				C1F9BFF9197B74B2005A2207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F9C001197B74B2005A2207 /* PBXTargetDependency */,
+			);
+			name = DrawbridgeDataTests;
+			productName = DrawbridgeDataTests;
+			productReference = C1F9BFFB197B74B2005A2207 /* DrawbridgeDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1F9BFCC197B74B2005A2207 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					C1F9BFFA197B74B2005A2207 = {
+						TestTargetID = C1F9BFD3197B74B2005A2207;
+					};
+				};
+			};
+			buildConfigurationList = C1F9BFCF197B74B2005A2207 /* Build configuration list for PBXProject "DrawbridgeData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1F9BFCB197B74B2005A2207;
+			productRefGroup = C1F9BFD5197B74B2005A2207 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1F9BFD3197B74B2005A2207 /* DrawbridgeData */,
+				C1F9BFFA197B74B2005A2207 /* DrawbridgeDataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1F9BFD2197B74B2005A2207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9BFEE197B74B2005A2207 /* Main_iPad.storyboard in Resources */,
+				C1F9BFF6197B74B2005A2207 /* Images.xcassets in Resources */,
+				C1F9BFEB197B74B2005A2207 /* Main_iPhone.storyboard in Resources */,
+				C1F9BFE2197B74B2005A2207 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F9BFF9197B74B2005A2207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9C007197B74B2005A2207 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1F9BFD0197B74B2005A2207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9BFF1197B74B2005A2207 /* DBMainViewController.m in Sources */,
+				C1F9BFE8197B74B2005A2207 /* DBAppDelegate.m in Sources */,
+				C1F9BFF4197B74B2005A2207 /* DBFlipsideViewController.m in Sources */,
+				C1F9BFE4197B74B2005A2207 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F9BFF7197B74B2005A2207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F9C009197B74B2005A2207 /* DrawbridgeDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1F9C001197B74B2005A2207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1F9BFD3197B74B2005A2207 /* DrawbridgeData */;
+			targetProxy = C1F9C000197B74B2005A2207 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1F9BFE0197B74B2005A2207 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F9BFE1197B74B2005A2207 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C1F9BFE9197B74B2005A2207 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F9BFEA197B74B2005A2207 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C1F9BFEC197B74B2005A2207 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F9BFED197B74B2005A2207 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C1F9C005197B74B2005A2207 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F9C006197B74B2005A2207 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1F9C00A197B74B2005A2207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1F9C00B197B74B2005A2207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1F9C00D197B74B2005A2207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
+				INFOPLIST_FILE = "DrawbridgeData/DrawbridgeData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C1F9C00E197B74B2005A2207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
+				INFOPLIST_FILE = "DrawbridgeData/DrawbridgeData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C1F9C010197B74B2005A2207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawbridgeData.app/DrawbridgeData";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DrawbridgeDataTests/DrawbridgeDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C1F9C011197B74B2005A2207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawbridgeData.app/DrawbridgeData";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawbridgeData/DrawbridgeData-Prefix.pch";
+				INFOPLIST_FILE = "DrawbridgeDataTests/DrawbridgeDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1F9BFCF197B74B2005A2207 /* Build configuration list for PBXProject "DrawbridgeData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F9C00A197B74B2005A2207 /* Debug */,
+				C1F9C00B197B74B2005A2207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F9C00C197B74B2005A2207 /* Build configuration list for PBXNativeTarget "DrawbridgeData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F9C00D197B74B2005A2207 /* Debug */,
+				C1F9C00E197B74B2005A2207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C1F9C00F197B74B2005A2207 /* Build configuration list for PBXNativeTarget "DrawbridgeDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F9C010197B74B2005A2207 /* Debug */,
+				C1F9C011197B74B2005A2207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1F9BFCC197B74B2005A2207 /* Project object */;
+}
