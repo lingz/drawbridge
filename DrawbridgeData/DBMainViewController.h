@@ -7,15 +7,18 @@
 //
 
 #import "DBFlipsideViewController.h"
+#import "DBStore.h"
 
 @class User;
 @class Domain;
 @class Account;
 
-@interface DBMainViewController : UIViewController <DBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface DBMainViewController : UIViewController <DBFlipsideViewControllerDelegate, UIPopoverControllerDelegate, DBStoreUserDelegate>
 
 @property (strong, nonatomic) User *activeUser;
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+
+- (void) handleUserUpdate;
 
 @end

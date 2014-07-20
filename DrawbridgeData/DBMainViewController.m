@@ -41,6 +41,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.store = [DBStore getStore];
+    self.store.userChangeDelegate = self;
     [self refreshStoreData];
 
 }
@@ -111,6 +112,11 @@
     } else {
         [self performSegueWithIdentifier:@"showAlternate" sender:sender];
     }
+}
+
+- (void) handleUserUpdate
+{
+    [self refreshStoreData];
 }
 
 - (IBAction)touchEvent:(id)sender {

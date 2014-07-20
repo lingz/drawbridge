@@ -23,7 +23,7 @@ FOUNDATION_EXPORT NSString *const FIREBASE_URL;
 @interface DBFirebase : NSObject
 
 
-
+@property id<DBFirebaseDelegate> delegate;
 @property Firebase *fb;
 
 + (DBFirebase *) getFirebase;

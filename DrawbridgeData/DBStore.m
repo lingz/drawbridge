@@ -17,8 +17,6 @@
 
 @property NSUserDefaults *defaults;
 @property DBFirebase *fbInterface;
-@property id<DBStoreUserDelegate> userChangeDelegate;
-@property id<DBStoreMessageDelegate> messageChangeDelegate;
 
 @end
 
@@ -65,6 +63,8 @@
     {
         [self changeActiveUser:theNewUser];
     }
+    // we need a new firebase
+    [self syncFirebase];
 }
 
 - (User *) phoneNumberToUser: (NSString *) phoneNumber {
@@ -77,6 +77,7 @@
     if (self = [super init]) {
         // Firebase init
         self.fbInterface = [DBFirebase getFirebase];
+        self.fbInterface.delegate = self;
         
         self.defaults = [NSUserDefaults standardUserDefaults];
         [self extractOptions];

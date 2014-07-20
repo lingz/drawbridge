@@ -28,6 +28,9 @@
 @interface DBStore : NSObject<DBFirebaseDelegate>
 @property User *activeUser;
 @property NSString *userPhoneNumber;
+@property id<DBStoreUserDelegate> userChangeDelegate;
+@property id<DBStoreMessageDelegate> messageChangeDelegate;
+
 
 + (DBStore *) getStore;
 - (void)saveContext;

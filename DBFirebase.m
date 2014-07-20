@@ -15,7 +15,7 @@ NSString *const FIREBASE_URL = @"https://drawbridgeauth.firebaseIO.com";
 @interface DBFirebase()
 
 @property Firebase *accounts;
-@property id<DBFirebaseDelegate> delegate;
+@property Firebase *pollingUser;
 
 @end
 
@@ -41,11 +41,6 @@ NSString *const FIREBASE_URL = @"https://drawbridgeauth.firebaseIO.com";
     return self;
 }
 
-- (void) setDelegate:(id<DBFirebaseDelegate>)delegate
-{
-    self.delegate = delegate;
-}
-
 - (void) saveUser: (User *)user
 {
     Firebase *userNode = [self.accounts childByAppendingPath:user.phoneNumber];
@@ -54,6 +49,10 @@ NSString *const FIREBASE_URL = @"https://drawbridgeauth.firebaseIO.com";
 
 - (void) loadUser: (NSString *)phoneNumber
 {
+    if (self.pollingUser)
+    {
+        [self.pollingUser removeAllObservers];
+    }
     Firebase *userNode = [self.accounts childByAppendingPath:phoneNumber];
     [userNode observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *userDict = snapshot.value;
@@ -63,6 +62,8 @@ NSString *const FIREBASE_URL = @"https://drawbridgeauth.firebaseIO.com";
             [self.delegate handleFBLoadUser:theNewUser];
         }
     }];
+    self.pollingUser = userNode;
+    
 }
 
 @end
